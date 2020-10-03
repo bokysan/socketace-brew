@@ -2,24 +2,24 @@
 class Default < Formula
   desc "Your ultimate connection proxy."
   homepage "https://github.com/bokysan/socketace"
-  version "1.0.9"
+  version "1.0.10"
   bottle :unneeded
 
   if OS.mac?
-    url "http://github.mycompany.com/bokysan/socketace-brew/releases/v1.0.9/socketace_1.0.9_darwin_amd64.tar.gz"
-    sha256 "c7a665fd23dff28b86e71b387ec6a92807f455ef0c0ef45aab6799ab84edd0b7"
+    url "http://github.mycompany.com/bokysan/socketace-brew/releases/v1.0.10/socketace_1.0.10_darwin_amd64.tar.gz"
+    sha256 "b46ac6842d2482a6ebdd09304b84c35e30335674a40444979e54f798fed3e45e"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "http://github.mycompany.com/bokysan/socketace-brew/releases/v1.0.9/socketace_1.0.9_linux_amd64.tar.gz"
-      sha256 "249a402f2f0acd5b5e46a4324a0c3dcc477f9089a9dfb11ecf6af2471a3557d2"
+      url "http://github.mycompany.com/bokysan/socketace-brew/releases/v1.0.10/socketace_1.0.10_linux_amd64.tar.gz"
+      sha256 "9beb27338d3e944b030a88c6b49baa3ad6cb0abdd388f60ce10bb66302c5566a"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "http://github.mycompany.com/bokysan/socketace-brew/releases/v1.0.9/socketace_1.0.9_linux_arm64.tar.gz"
-        sha256 "146afc12ad68e52b908eafc06690b5384c3dcb75df2d6a9774113f953f99fec6"
+        url "http://github.mycompany.com/bokysan/socketace-brew/releases/v1.0.10/socketace_1.0.10_linux_arm64.tar.gz"
+        sha256 "293ffcfe8303bad66693c098b9ac3901ce7e47f33c8d2a3d88ca2192b597082d"
       else
-        url "http://github.mycompany.com/bokysan/socketace-brew/releases/v1.0.9/socketace_1.0.9_linux_armv6.tar.gz"
-        sha256 "da8f5e11a2c3d0e303df5207753a35bef0b4b1ad2312c1eb108ee0283a270bb0"
+        url "http://github.mycompany.com/bokysan/socketace-brew/releases/v1.0.10/socketace_1.0.10_linux_armv6.tar.gz"
+        sha256 "e80af869158d2703866bf1647fef55fe67d0b83d8c3bbb0f9b63141ba9689e88"
       end
     end
   end
