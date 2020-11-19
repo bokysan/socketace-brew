@@ -2,26 +2,24 @@
 class Default < Formula
   desc "Your ultimate connection proxy."
   homepage "https://github.com/bokysan/socketace"
-  version "1.0.10"
+  version "2.1.0"
   bottle :unneeded
 
   if OS.mac?
-    url "http://github.mycompany.com/bokysan/socketace-brew/releases/v1.0.10/socketace_1.0.10_darwin_amd64.tar.gz"
-    sha256 "b46ac6842d2482a6ebdd09304b84c35e30335674a40444979e54f798fed3e45e"
-  elsif OS.linux?
-    if Hardware::CPU.intel?
-      url "http://github.mycompany.com/bokysan/socketace-brew/releases/v1.0.10/socketace_1.0.10_linux_amd64.tar.gz"
-      sha256 "9beb27338d3e944b030a88c6b49baa3ad6cb0abdd388f60ce10bb66302c5566a"
-    end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "http://github.mycompany.com/bokysan/socketace-brew/releases/v1.0.10/socketace_1.0.10_linux_arm64.tar.gz"
-        sha256 "293ffcfe8303bad66693c098b9ac3901ce7e47f33c8d2a3d88ca2192b597082d"
-      else
-        url "http://github.mycompany.com/bokysan/socketace-brew/releases/v1.0.10/socketace_1.0.10_linux_armv6.tar.gz"
-        sha256 "e80af869158d2703866bf1647fef55fe67d0b83d8c3bbb0f9b63141ba9689e88"
-      end
-    end
+    url "http://github.mycompany.com/bokysan/socketace-brew/releases/v2.1.0/socketace_2.1.0_darwin_amd64.tar.gz"
+    sha256 "fcca34fa65c669bfe40ad83310bf914ecac5a6281c071f66af7b24c1e0d6ffef"
+  end
+  if OS.linux? && Hardware::CPU.intel?
+    url "http://github.mycompany.com/bokysan/socketace-brew/releases/v2.1.0/socketace_2.1.0_linux_amd64.tar.gz"
+    sha256 "3645f12c91b7bce12caf009320e64c290f3bd347d41e6a8186091a8b1e810f7e"
+  end
+  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+    url "http://github.mycompany.com/bokysan/socketace-brew/releases/v2.1.0/socketace_2.1.0_linux_armv6.tar.gz"
+    sha256 "15b95b99de127260420e73b663fa1f97dab3e00d1c42c930826725829d96463b"
+  end
+  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+    url "http://github.mycompany.com/bokysan/socketace-brew/releases/v2.1.0/socketace_2.1.0_linux_arm64.tar.gz"
+    sha256 "5f56ec0f715c3ad5df5a8574d788d2e30e01b3ecca6e1e3d4f23eb043ad8b964"
   end
   
   head "https://github.com/bokysan/socketace.git"
